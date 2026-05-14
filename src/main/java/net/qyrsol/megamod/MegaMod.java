@@ -12,6 +12,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.qyrsol.megamod.block.ModBlocks;
 import net.qyrsol.megamod.item.ModCreativeModeTabs;
 import net.qyrsol.megamod.item.ModItems;
 import org.slf4j.Logger;
@@ -30,6 +31,7 @@ public class MegaMod {
         ModCreativeModeTabs.register(modEventBus);
 
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
@@ -46,6 +48,10 @@ public class MegaMod {
         if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.STEEL_INGOT);
             event.accept(ModItems.RAW_STEEL);
+        }
+        if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
+            event.accept(ModBlocks.STEEL_BLOCK);
+            event.accept(ModBlocks.RAW_STEEL_BLOCK);
         }
     }
 

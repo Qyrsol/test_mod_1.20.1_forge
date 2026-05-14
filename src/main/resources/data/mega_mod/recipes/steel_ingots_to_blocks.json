@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "mega_mod:steel_ingot"
+    }
+  },
+  "result": {
+    "item": "mega_mod:steel_block"
+  }
+}

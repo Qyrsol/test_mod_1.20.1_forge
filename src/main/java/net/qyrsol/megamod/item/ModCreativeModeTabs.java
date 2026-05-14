@@ -8,6 +8,7 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 import net.qyrsol.megamod.MegaMod;
+import net.qyrsol.megamod.block.ModBlocks;
 
 public class ModCreativeModeTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS =
@@ -19,6 +20,8 @@ public static final RegistryObject<CreativeModeTab> MEGA_TAB = CREATIVE_MODE_TAB
                 .displayItems((pParameters, pOutput) -> {
                     pOutput.accept(ModItems.STEEL_INGOT.get());
                     pOutput.accept(ModItems.RAW_STEEL.get());
+                    pOutput.accept(ModBlocks.STEEL_BLOCK.get());
+                    pOutput.accept(ModBlocks.RAW_STEEL_BLOCK.get());
                 })
                 .build());
 
