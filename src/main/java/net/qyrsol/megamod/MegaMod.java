@@ -12,6 +12,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.qyrsol.megamod.item.ModCreativeModeTabs;
 import net.qyrsol.megamod.item.ModItems;
 import org.slf4j.Logger;
 
@@ -25,6 +26,8 @@ public class MegaMod {
 
     public MegaMod(FMLJavaModLoadingContext context) {
         IEventBus modEventBus = context.getModEventBus();
+
+        ModCreativeModeTabs.register(modEventBus);
 
         ModItems.register(modEventBus);
 
@@ -42,6 +45,7 @@ public class MegaMod {
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.STEEL_INGOT);
+            event.accept(ModItems.RAW_STEEL);
         }
     }
 

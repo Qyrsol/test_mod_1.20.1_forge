@@ -1,3 +1,5 @@
 {
-  "item.mega_mod.steel_ingot": "Steel ingot"
+  "item.mega_mod.steel_ingot": "Steel ingot",
+  "item.mega_mod.raw_steel": "Raw steel",
+  "creativetab.mega_tab": "Mega items"
 }
