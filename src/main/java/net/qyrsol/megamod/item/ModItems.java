@@ -6,6 +6,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.qyrsol.megamod.MegaMod;
+import net.qyrsol.megamod.item.custom.MegaDetectorItem;
 
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
@@ -15,6 +16,8 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> RAW_STEEL = ITEMS.register("raw_steel",
             () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> MEGA_DETECTOR = ITEMS.register("mega_detector",
+            () -> new MegaDetectorItem(new Item.Properties()));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

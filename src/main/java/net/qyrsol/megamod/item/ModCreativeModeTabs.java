@@ -20,6 +20,8 @@ public static final RegistryObject<CreativeModeTab> MEGA_TAB = CREATIVE_MODE_TAB
                 .displayItems((pParameters, pOutput) -> {
                     pOutput.accept(ModItems.STEEL_INGOT.get());
                     pOutput.accept(ModItems.RAW_STEEL.get());
+                    pOutput.accept(ModItems.MEGA_DETECTOR.get());
+
                     pOutput.accept(ModBlocks.STEEL_BLOCK.get());
                     pOutput.accept(ModBlocks.RAW_STEEL_BLOCK.get());
                 })
